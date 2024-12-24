@@ -11,14 +11,49 @@ button{
     color: gold;
     background-color: black;
 } */
- h2{
-    color: orange;
- }
- p{
-    background-color: black;
-    color: white;
- }
- button{
-    color: white;
-    background-color: blue;
- }
+h2 {
+  /* color: rgb(120, 0,120); */
+  background-color: #000;
+  border: solid;
+  /* color:#e0e007; */
+  text-align: justify;/*  start, end, left , right,
+  text-align: justify; to align text in left and right boundary*/
+  font-weight: normal; /* bold,700,normal,100,parent-bolder,lighter */
+  text-decoration:wavy red underline;/* overline,line-through,none*/
+  letter-spacing: 5px;/* 96 px=1 inch */
+  color: rgb(0, 174, 255);
+  font-family: fantasy;
+}
+h1{
+  text-decoration:solid rgb(2, 247, 39) overline;
+  letter-spacing: 50px;
+  text-align: center;
+  font-family: fantasy;
+  
+
+}
+p {
+ text-align: justify;
+ /* text-decoration: dotted; */
+ font-weight: normal;
+ line-height: normal;
+ font-size: large;
+ font-family: avant garde, didot, sans-serif;
+}
+
+button {
+  color: white;
+  background-color: blue;
+}
+a{
+  text-decoration: none;
+}
+/* HexaDecimal color system */
+/* letter-0 to 9 & A to F */
+/* p{
+    color:#000000 ;black
+    color: #ffffff; white
+    color: #ffff00;yellow
+    color: #0000ff;blue
+    color: #ff00ff;purple
+} */
