@@ -80,3 +80,14 @@ while (true) {
 
         
 }
+const car={
+    name:"koenigsegg",
+    model:"regera",
+    color:"silver",
+};
+//function funcName(){ do something} 
+function hello() {
+    console.log("hello");
+    
+}
+hello();
