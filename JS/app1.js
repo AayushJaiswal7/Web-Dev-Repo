@@ -145,35 +145,35 @@
 
 // multipleGreet(function () {console.log("namaste");}
 // , 100);
-// const student ={
-//     name:"shradha",
-//     age:23,
-//     eng:95,
-//     math:93,
-//     phy:97,
-//     getAvg(){
-//         let avg=(this.phy+this.math+this.eng)/3;
-//         console.log(`${this.name} got avg marks=${avg}`);
+const student ={
+    name:"shradha",
+    age:23,
+    eng:95,
+    math:93,
+    phy:97,
+    getAvg(){
+        let avg=(this.phy+this.math+this.eng)/3;
+        console.log(`${this.name} got avg marks=${avg}`);
 
-//     }
-// }
-// function getAvg() {
-//     console.log(this);
+    }
+}
+function getAvg() {
+    console.log(this);
 
-// }
-// console.log("hello");
-// console.log("hello");
-// // let a=5;
-// try {
-//     console.log(a);
+}
+console.log("hello");
+console.log("hello");
+// let a=5;
+try {
+    console.log(a);
 
-// } catch (error) {
-//     console.log("error found in LINE");
-//     console.log(error);
+} catch (error) {
+    console.log("error found in LINE");
+    console.log(error);
 
-// }
-// console.log("hello");
-// console.log("hello");
+}
+console.log("hello");
+console.log("hello");
 
 const sum = (a, b) => {
     console.log(a + b);
