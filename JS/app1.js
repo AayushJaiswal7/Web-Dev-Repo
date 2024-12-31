@@ -145,72 +145,122 @@
 
 // multipleGreet(function () {console.log("namaste");}
 // , 100);
-const student ={
-    name:"shradha",
-    age:23,
-    eng:95,
-    math:93,
-    phy:97,
-    getAvg(){
-        let avg=(this.phy+this.math+this.eng)/3;
-        console.log(`${this.name} got avg marks=${avg}`);
+// const student ={
+//     name:"shradha",
+//     age:23,
+//     eng:95,
+//     math:93,
+//     phy:97,
+//     getAvg(){
+//         let avg=(this.phy+this.math+this.eng)/3;
+//         console.log(`${this.name} got avg marks=${avg}`);
 
+//     }
+// }
+// function getAvg() {
+//     console.log(this);
+
+// }
+// console.log("hello");
+// console.log("hello");
+// // let a=5;
+// try {
+//     console.log(a);
+
+// } catch (error) {
+//     console.log("error found in LINE");
+//     console.log(error);
+
+// }
+// console.log("hello");
+// console.log("hello");
+
+// const sum = (a, b) => {
+//     console.log(a + b);
+
+// }
+// const pow = (a, b) =>
+//     (a ** b);
+// const mul = (a, b) => (
+//     a * b
+// );
+// console.log("hi there!");
+
+// setTimeout(
+//     () => {
+//         console.log("Ayush Jaiswal");
+
+//     }, 5000)
+//     console.log("welcome to");
+//     console.log("welcome to");
+//     console.log("welcome to");
+//     console.log("welcome to");
+//     console.log("welcome to");
+//     console.log("welcome to");
+
+//     let id=setInterval(
+//         ()=>{
+//             console.log("Hello world");
+
+//         },2000
+//     )
+//     let id2=setInterval(
+//         ()=>{
+//             console.log("Ayush Jaiswal");
+
+//         },3000
+//     )
+//     console.log(id);
+//     console.log(id2);
+
+const student1 = {
+    name: "aman",
+    marks: 95,
+    prop: this,//global scope
+    getName: function () {
+        console.log(this);
+
+        return this.name;
+    },
+    getMarks: () => {
+        console.log(this);//parent's scope
+        return this.marks;
+
+    },
+    getInfo1:function () {
+        setTimeout(()=>{
+            console.log(this);//student
+
+        },2000);
+    },
+    getInfo2:function () {
+        setTimeout(function(){
+            console.log(this);//window
+
+        },2000);
+    },
+};
+const a = 5;//global scope 
+// let id=setInterval(()=>{
+//     console.log("helllo world");
+        
+// },2000
+// )
+// setTimeout(()=>{
+//     clearInterval(id);
+//     console.log("clear interval ran");
+    
+// },10000)
+
+let arrayAvg=(arr)=>{
+
+    let sum=0;
+    for (let number of arr) {
+        sum+=number;
+        
     }
+    return sum/arr.length;
 }
-function getAvg() {
-    console.log(this);
-
-}
-console.log("hello");
-console.log("hello");
-// let a=5;
-try {
-    console.log(a);
-
-} catch (error) {
-    console.log("error found in LINE");
-    console.log(error);
-
-}
-console.log("hello");
-console.log("hello");
-
-const sum = (a, b) => {
-    console.log(a + b);
-
-}
-const pow = (a, b) =>
-    (a ** b);
-const mul = (a, b) => (
-    a * b
-);
-console.log("hi there!");
-
-setTimeout(
-    () => {
-        console.log("Ayush Jaiswal");
-
-    }, 5000)
-    console.log("welcome to");
-    console.log("welcome to");
-    console.log("welcome to");
-    console.log("welcome to");
-    console.log("welcome to");
-    console.log("welcome to");
-
-    let id=setInterval(
-        ()=>{
-            console.log("Hello world");
-            
-        },2000
-    )
-    let id2=setInterval(
-        ()=>{
-            console.log("Ayush Jaiswal");
-            
-        },3000
-    )
-    console.log(id);
-    console.log(id2);
-    
-    
+let arr=[1,2,3,4,5];
+console.log(
+    arrayAvg(arr));
