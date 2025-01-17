@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: Arial;
 }
 
@@ -35,4 +35,7 @@ color:  green ;
 
 #description {
   background-color: rgb(163, 150, 133);
+} */
+.red{
+  color: red;
 }

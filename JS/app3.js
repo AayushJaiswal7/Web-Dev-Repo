@@ -33,3 +33,17 @@ for(link of links){
 //name.childElementCount
 //name.children[0]
 //name.children[0].previousElementSibling
+//box.appendChild(newPara)
+//document.createElement('button')
+//newPara.append("this is new text")//append against old text
+//newPara.prepend("message")
+//insertAdjacent(where,element)
+let para1=document.createElement("p");
+para1.innerText="Hey I'm red!";
+document.querySelector('body').append(para1);
+
+para1.classList.add("red");
+let h3=document.createElement("h3");
+h3.innerText="Hey Im blue h3";
+document.querySelector('body').append(h3);
+h3.style.color="blue";
