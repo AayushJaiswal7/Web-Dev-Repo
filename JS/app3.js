@@ -23,3 +23,13 @@ let links=document.querySelectorAll(".box a");
 for(link of links){
     link.style.color="blue";
 }
+//document.querySelector
+//name.classList.add()
+//name.classList.remove()
+//name.classList.toggle()
+//name.classList.contains()
+//name.parentElement
+//name.children
+//name.childElementCount
+//name.children[0]
+//name.children[0].previousElementSibling
