@@ -59,3 +59,28 @@ div.append(h1);
 div.append(para2);
 div.classList.add("box");
 document.querySelector('body').prepend(div);
+
+let btns=document.querySelectorAll("button");
+// btn.onclick=function(){
+//   alert("button was clicked");
+  
+// };
+for (btn of btns) {
+    // btn.onclick=sayHello;//no parantesis
+    // btn.onmouseenter= function(){//moving cursor over the button count
+    //     console.log("you entered a button");
+    // };
+        // btn.addEventListener("click",sayHello);
+        // btn.addEventListener("click",sayName);
+        btn.addEventListener("dblclick",function(){
+            console.log("you double clicked me");
+            
+        });
+
+}
+function sayHello(){
+    alert("Hello");
+}
+function sayName(){
+    alert("Apna College")
+}
