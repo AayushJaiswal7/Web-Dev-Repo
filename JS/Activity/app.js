@@ -19,19 +19,31 @@
 //     let color=`rgb(${red},  ${green},  ${blue})`;
 //     return color;
 //  }
+
+let h1 = document.querySelector("h1");
+let h3= document.querySelector("h3");
 let p = document.querySelector("p");
+let btn = document.querySelector("button");
 
-p.addEventListener("click",function(){
-console.log("para was clicked");
+// p.addEventListener("click",function(){
+// console.log("para was clicked");
 
-})
-let box=document.querySelector(".box");
-box.addEventListener("mouseenter",function(){
-    console.log("mouse inside div");
+// })
+// let box=document.querySelector(".box");
+// box.addEventListener("mouseenter",function(){
+//     console.log("mouse inside div");
     
-})
-let btn =document.querySelector("button");
-btn.addEventListener("click",function(){
- console.log(this.innerText);
- 
-})
+// })
+// let btn =document.querySelector("button");
+// btn.addEventListener("click",function(){
+//  console.dir(this.innerText);
+//  this .style.backgroundColor="blue";
+// })
+function changeColor(){
+    console.dir(this.innerText);
+    this.style.backgroundColor="blue";
+}
+btn.addEventListener("click",changeColor);
+h1.addEventListener("click",changeColor);
+h3.addEventListener("click",changeColor);
+p.addEventListener("click",changeColor);
