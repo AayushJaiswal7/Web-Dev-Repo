@@ -17,3 +17,7 @@ app.get("/",(req,res)=>{
 app.get("/hello",(req,res)=>{
     res.send("hello");
 });
+app.get("/rolldice",(req,res)=>{
+    let diceval=Math.floor(Math.random()*6)+1;
+    res.render("rollDice.ejs",{num:diceval});
+});
