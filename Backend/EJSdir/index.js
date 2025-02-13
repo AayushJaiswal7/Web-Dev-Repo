@@ -21,3 +21,11 @@ app.get("/rolldice",(req,res)=>{
     let diceval=Math.floor(Math.random()*6)+1;
     res.render("rollDice.ejs",{num:diceval});
 });
+app.get("/ig/:username",(req,res) =>{
+    const instadata=require("./data.json");
+    console.log(instadata);
+    
+    // const followers=["adams","bob","steve","abc"];
+    // let {username}=req.params;
+    res.render("instagram.ejs",{data:instadata});
+})
