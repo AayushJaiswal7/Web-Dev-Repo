@@ -1,6 +1,7 @@
 .Product{
-    border:1px solid black;
+    border:1px solid rgb(8, 6, 6);
     border-radius: 1 5px;
     margin-bottom: 14px;
     padding: 0 10px 0 10px;
+    /* text-decoration:dashed white; */
 }

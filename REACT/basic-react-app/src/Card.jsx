@@ -2,14 +2,15 @@
 import Product from "./Product.jsx";
 function Card() {
     let options=["hi-tech", "durable","fast"];
+    let options2 = {a:"hi-tech",b: "durable",c:"fast"};
     return (
-      <div>
+      <>
 
-      <Product title="phone" price={30000} />
-      <Product title="laptop" price={40000} />
-      <Product title="pen"  />
+      <Product title="phone" price={30000} features={options} features2={options2}/>
+      {/* <Product title="laptop" price={40000} />
+      <Product title="pen" price={1} /> */}
 
-      </div>
+      </>
     );
   }
   export default Card;
