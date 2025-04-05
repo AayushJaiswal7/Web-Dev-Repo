@@ -38,8 +38,7 @@ body{
     background-color: #ebebeb;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: space-evenly ;
+    justify-content:  space-evenly ;
 }
 .card{
     border: none!important;
@@ -61,3 +60,13 @@ body{
     text-decoration: none;
 }
 /* Card Effect */
+.card-img-overlay {
+    opacity: 0;
+    transition: 0.1s all;
+  }
+  
+  .card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+  }
+  
