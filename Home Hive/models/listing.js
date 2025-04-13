@@ -16,7 +16,7 @@ const listingSchema = new Schema({
     //   country: String,
     title: {
         type: String,
-        required: true,
+        
     },
     description: String,
     image: {
