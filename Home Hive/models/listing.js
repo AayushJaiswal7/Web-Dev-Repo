@@ -16,7 +16,7 @@ const listingSchema = new Schema({
     //   country: String,
     title: {
         type: String,
-        
+
     },
     description: String,
     image: {
@@ -24,11 +24,19 @@ const listingSchema = new Schema({
         url: {
             type: String,
             default: "https://unsplash.com/photos/golden-gate-bridge-during-daytime-gZXx8lKAb7Y",
+            // set: (v) =>
+            //     v === ""
+            //         ? "https://unsplash.com/photos/golden-gate-bridge-during-daytime-gZXx8lKAb7Y"
+            //         : v,
         },
     },
     price: Number,
     location: String,
     country: String,
+    reviews:[{
+        type:Schema.Types.ObjectId,
+        ref:"Review",
+    }]
 });
 const Listing = mongoose.model("Listing", listingSchema);
 module.exports = Listing;
