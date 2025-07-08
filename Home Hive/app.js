@@ -7,11 +7,12 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const wrapAsync = require("./utils/wrapAsync.js");
 const ExpressError = require("./utils/ExpressError.js");
-const { listingSchema,reviewSchema } = require("./schema.js");
+const { listingSchema, reviewSchema } = require("./schema.js");
 const Review = require("./models/review.js");
-
-const  listing = require("./routes/listing.js");
-const  review = require("./routes/review.js");
+const session = require("express-session");
+const flash = require("connect-flash");
+const listing = require("./routes/listing.js");
+const review = require("./routes/review.js");
 
 
 main()
@@ -32,13 +33,30 @@ app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 app.set("view engine", "ejs");
 
+const sessionOptions = {
+    secret: "mysecretcode",
+    resave: false,
+    saveUninitalized: true,
+    cookie: {
+        expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
+        maxAge: 7 * 24 * 60 * 60 * 1000,
+        httpOnly:true
+    }
+}
+app.use(session(sessionOptions));
+app.use(flash());
 
+app.use((req,res,next)=>{
+    res.locals.success=req.flash("success")
+    res.locals.error=req.flash("error")
+    next();
+});
 app.get("/", (req, res) => {
     res.send("hi, i am root");
 });
 
-app.use("/listings",listing);
-app.use("/listings/:id/reviews",review);
+app.use("/listings", listing);
+app.use("/listings/:id/reviews", review);
 
 
 // app.get("/testListing",async(req,res)=>{
